@@ -1,0 +1,21 @@
+%button-base {
+  @include inline-flexbox;
+  color: $sub-white;
+  background-color: $dark-blue;
+  border-radius: 4px;
+  box-shadow: $inner-shadow;
+}
+
+.height-25 {
+  @extend %button-base;
+  @include text-style(12);
+  height: 25px;
+  padding: 4px;
+}
+
+.height-39 {
+  @extend %button-base;
+  @include text-style(14);
+  height: 39px;
+  padding: 10px;
+}
