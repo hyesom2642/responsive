@@ -1,0 +1,127 @@
+.global-footer {
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+
+  .footer-wrapper {
+    @include flexbox;
+    flex-direction: column-reverse;
+
+    .footer-logo {
+      @include flexbox;
+      flex-direction: column-reverse;
+
+      background-color: $white;
+      padding: 20px 80px;
+      text-align: center;
+
+      &-header {
+        img {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 13px;
+        }
+        &-title {
+          @include text-style(14, $black);
+          font-style: italic;
+        }
+      }
+      &-contact {
+        margin-bottom: 30px;
+        .tel {
+          @include flexbox;
+          margin-bottom: 10px;
+          i {
+            @include text-style(24, $black);
+            font-weight: 700;
+            margin-right: 8px;
+          }
+          &-phone {
+            @include text-style(14, $black);
+            font-weight: 400;
+            display: inline-block;
+          }
+        }
+        .sns {
+          @include flexbox;
+          &-title {
+            @include text-style(14, $black);
+            margin-right: 8px;
+          }
+          a {
+            @include inline-flexbox;
+            margin-right: 8px;
+            i {
+              @include text-style(24, $dark-blue);
+            }
+          }
+          a:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .footer-content {
+      padding: 40px 60px;
+      color: $sub-white;
+      background-color: $dark-blue;
+      text-align: center;
+
+      &-menu {
+        margin-bottom: 43px;
+        &-title {
+          @include text-style(16);
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+        &-list {
+        }
+        &-item {
+          margin-bottom: 2px;
+          a {
+            @include text-style(14);
+            font-weight: 400;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-contact {
+        margin-bottom: 43px;
+        &-title {
+          @include text-style(16);
+          font-weight: 700;
+          margin-bottom: 9px;
+        }
+        &-instagram,
+        &-email,
+        &-name {
+          @include text-style(14);
+          display: inline-block;
+          font-weight: 400;
+          margin-bottom: 9px;
+        }
+        &-name {
+          margin-bottom: 0;
+        }
+      }
+
+      &-copyright {
+        p {
+          @include text-style(14);
+          font-weight: 700;
+          margin-bottom: 18px;
+        }
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+  }
+}
